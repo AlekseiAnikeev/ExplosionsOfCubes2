@@ -21,15 +21,13 @@ public class Spawner : MonoBehaviour
         {
             for (int i = 0; i < randomCount; i++)
                 _createObject.Create(_cube.transform.position);
-
-            Destroy(gameObject);
         }
         else
         {
             _destruction.MultiplierExplosionEffects(_cube.EffectMyltiply);
-            _destruction.Explode();
-
-            Destroy(gameObject);
+            _destruction.Explode();            
         }
+
+        Destroy(gameObject);
     }
 }
